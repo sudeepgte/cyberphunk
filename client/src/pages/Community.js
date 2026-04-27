@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
 import axios from 'axios';
@@ -6,20 +6,20 @@ import axios from 'axios';
 const API = 'http://localhost:5000/api';
 
 const BENEFITS = [
-  { icon: 'bi-mortarboard-fill', title: 'World-Class Education', desc: 'Access bootcamps, courses, and workshops led by industry experts.', color: 'var(--cyan)' },
-  { icon: 'bi-trophy-fill', title: 'Hackathon Prizes', desc: 'Compete for $500K+ in annual prizes across our global hackathons.', color: 'var(--gold)' },
-  { icon: 'bi-people-fill', title: 'Global Network', desc: 'Connect with 5,000+ builders, investors, and researchers worldwide.', color: 'var(--pink)' },
-  { icon: 'bi-shield-lock-fill', title: 'Privacy-First Tools', desc: 'Access exclusive privacy tools and infrastructure built by the community.', color: 'var(--green)' },
-  { icon: 'bi-badge-fill', title: 'CypherBadge NFTs', desc: 'Earn on-chain credentials that prove your Web3 skills.', color: 'var(--purple)' },
-  { icon: 'bi-rocket-takeoff-fill', title: 'Launch Support', desc: 'Get mentorship, funding introductions, and go-to-market support.', color: 'var(--cyan)' },
+  { icon: 'bi-mortarboard-fill', title: 'World-Class Education', desc: 'Access bootcamps, courses, and workshops led by industry experts.', color: 'var(--primary)' },
+  { icon: 'bi-trophy-fill', title: 'Hackathon Prizes', desc: 'Compete for $500K+ in annual prizes across our global hackathons.', color: 'var(--accent)' },
+  { icon: 'bi-people-fill', title: 'Global Network', desc: 'Connect with 5,000+ builders, investors, and researchers worldwide.', color: 'var(--secondary)' },
+  { icon: 'bi-shield-lock-fill', title: 'Privacy-First Tools', desc: 'Access exclusive tools and infrastructure built by the community.', color: '#00FF88' },
+  { icon: 'bi-badge-fill', title: 'CyberBadge NFTs', desc: 'Earn on-chain credentials that prove your Web3 skills.', color: '#9B59B6' },
+  { icon: 'bi-rocket-takeoff-fill', title: 'Launch Support', desc: 'Get mentorship, funding introductions, and go-to-market support.', color: 'var(--primary)' },
 ];
 
 const SOCIALS = [
-  { icon: 'bi-twitter-x', name: 'Twitter / X', handle: '@CypherpunkWeb3', desc: '14.2K followers', href: '#', color: '#000' },
-  { icon: 'bi-discord', name: 'Discord', handle: 'Cypherpunk Server', desc: '8,400+ members', href: '#', color: '#5865F2' },
-  { icon: 'bi-telegram', name: 'Telegram', handle: '@CypherpunkDAO', desc: '3,100 subscribers', href: '#', color: '#26A5E4' },
-  { icon: 'bi-github', name: 'GitHub', handle: 'cypherpunk-io', desc: '1,200+ stars', href: '#', color: '#fff' },
-  { icon: 'bi-youtube', name: 'YouTube', handle: 'Cypherpunk Channel', desc: '22K subscribers', href: '#', color: '#FF0000' },
+  { icon: 'bi-twitter-x', name: 'Twitter / X', handle: '@CyberPhunkWeb3', desc: '14.2K followers', href: '#', color: '#000' },
+  { icon: 'bi-discord', name: 'Discord', handle: 'CyberPhunk Server', desc: '8,400+ members', href: '#', color: '#5865F2' },
+  { icon: 'bi-telegram', name: 'Telegram', handle: '@CyberPhunkDAO', desc: '3,100 subscribers', href: '#', color: '#26A5E4' },
+  { icon: 'bi-github', name: 'GitHub', handle: 'cyberphunk-io', desc: '1,200+ stars', href: '#', color: '#fff' },
+  { icon: 'bi-youtube', name: 'YouTube', handle: 'CyberPhunk Channel', desc: '22K subscribers', href: '#', color: '#FF0000' },
 ];
 
 const Community = () => {
@@ -59,8 +59,8 @@ const Community = () => {
   return (
     <>
       {/* Hero */}
-      <section style={{ paddingTop: '140px', paddingBottom: '80px', background: 'linear-gradient(135deg, rgba(0,255,255,0.06) 0%, rgba(255,0,127,0.06) 100%), var(--bg-surface)', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(0,255,255,0.1) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
+      <section style={{ paddingTop: '140px', paddingBottom: '80px', background: 'linear-gradient(135deg, rgba(255,107,0,0.06) 0%, rgba(255,61,0,0.06) 100%), var(--bg-surface)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,107,0,0.1) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
         <div className="container text-center" style={{ position: 'relative', zIndex: 1 }}>
           <ScrollReveal>
             <span className="section-label"><i className="bi bi-people me-2"></i>Community</span>
@@ -68,10 +68,10 @@ const Community = () => {
               Join the <span className="gradient-text">Revolution</span>
             </h1>
             <p className="section-subtitle mx-auto mb-5">
-              Become part of a global community of Web3 builders, privacy advocates, and digital sovereignty warriors. No permission required — just code.
+              Become part of a global community of Web3 builders, innovators, and digital sovereignty warriors. No permission required — just build.
             </p>
             <div className="d-flex justify-content-center gap-3 flex-wrap">
-              <a href="#membership" className="btn-solid-cyan" style={{ padding: '14px 40px', fontSize: '1.05rem' }}>
+              <a href="#membership" className="btn-solid-primary" style={{ padding: '14px 40px', fontSize: '1.05rem' }}>
                 <i className="bi bi-person-plus-fill me-2"></i>Become a Member
               </a>
               <a href="#contact" className="btn-neon" style={{ padding: '14px 40px', fontSize: '1.05rem' }}>
@@ -89,7 +89,7 @@ const Community = () => {
             <div className="text-center mb-5">
               <span className="section-label"><i className="bi bi-gem me-2"></i>Membership</span>
               <h2 className="section-title">What You <span className="gradient-text">Unlock</span></h2>
-              <p className="section-subtitle mx-auto">Cypherpunk membership is free and open to all builders. Here's what you get access to.</p>
+              <p className="section-subtitle mx-auto">CyberPhunk membership is free and open to all builders. Here's what you get access to.</p>
             </div>
           </ScrollReveal>
 
@@ -112,14 +112,14 @@ const Community = () => {
           <ScrollReveal delay={200}>
             <div className="text-center mt-5">
               <div className="glass-card p-5 d-inline-block" style={{ maxWidth: 600, width: '100%' }}>
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: 'var(--cyan)', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: 16 }}>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: 'var(--primary)', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: 16 }}>
                   // MEMBERSHIP_TIERS
                 </div>
                 <div className="row g-3">
                   {[
                     { tier: 'Anon', color: 'var(--text-secondary)', price: 'Free', desc: 'Open access to events & blog' },
-                    { tier: 'Builder', color: 'var(--cyan)', price: '0.01 ETH', desc: 'Full community access + badges' },
-                    { tier: 'Cypher', color: 'var(--gold)', price: '0.1 ETH', desc: 'VIP events + VC introductions' },
+                    { tier: 'Builder', color: 'var(--primary)', price: '0.01 ETH', desc: 'Full community access + badges' },
+                    { tier: 'Cypher', color: 'var(--accent)', price: '0.1 ETH', desc: 'VIP events + VC introductions' },
                   ].map(({ tier, color, price, desc }) => (
                     <div className="col-12" key={tier}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 16px', background: 'var(--bg-glass)', border: `1px solid ${color}30`, borderRadius: 8, flexWrap: 'wrap', gap: 8 }}>
@@ -147,12 +147,12 @@ const Community = () => {
                 <span className="section-label"><i className="bi bi-wallet2 me-2"></i>Wallet Connect</span>
                 <h2 className="section-title">Connect Your <span className="gradient-text">Web3 Identity</span></h2>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.9, marginBottom: 24 }}>
-                  Link your Ethereum wallet to verify your on-chain identity, access member-only content, and receive your CypherBadge credentials.
+                  Link your Ethereum wallet to verify your on-chain identity, access member-only content, and receive your CyberBadge credentials.
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0, marginBottom: 32 }}>
-                  {['MetaMask, WalletConnect & Coinbase Wallet supported', 'No KYC — your keys, your identity', 'Access exclusive on-chain content', 'Receive CypherBadge NFT credentials'].map((item, i) => (
+                  {['MetaMask, WalletConnect & Coinbase Wallet supported', 'No KYC — your keys, your identity', 'Access exclusive on-chain content', 'Receive CyberBadge NFT credentials'].map((item, i) => (
                     <li key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'var(--text-secondary)', fontSize: '0.92rem', marginBottom: 10 }}>
-                      <i className="bi bi-check-circle-fill" style={{ color: 'var(--green)', fontSize: '0.9rem', flexShrink: 0 }}></i>
+                      <i className="bi bi-check-circle-fill" style={{ color: '#00FF88', fontSize: '0.9rem', flexShrink: 0 }}></i>
                       {item}
                     </li>
                   ))}
@@ -164,16 +164,16 @@ const Community = () => {
                 <div className="glass-card p-5 text-center">
                   {walletConnected ? (
                     <div>
-                      <div style={{ width: 70, height: 70, borderRadius: '50%', background: 'rgba(0,255,136,0.15)', border: '2px solid var(--green)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', boxShadow: '0 0 30px rgba(0,255,136,0.3)' }}>
-                        <i className="bi bi-check-circle-fill" style={{ fontSize: '1.8rem', color: 'var(--green)' }}></i>
+                      <div style={{ width: 70, height: 70, borderRadius: '50%', background: 'rgba(0,255,136,0.15)', border: '2px solid #00FF88', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', boxShadow: '0 0 30px rgba(0,255,136,0.3)' }}>
+                        <i className="bi bi-check-circle-fill" style={{ fontSize: '1.8rem', color: '#00FF88' }}></i>
                       </div>
-                      <h5 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--green)', marginBottom: 8 }}>Wallet Connected!</h5>
+                      <h5 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: '#00FF88', marginBottom: 8 }}>Wallet Connected!</h5>
                       <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: 20, wordBreak: 'break-all' }}>
                         {walletAddress.substring(0, 6)}...{walletAddress.substring(walletAddress.length - 4)}
                       </div>
                       <div style={{ padding: '12px 20px', background: 'rgba(0,255,136,0.08)', border: '1px solid rgba(0,255,136,0.2)', borderRadius: 8 }}>
-                        <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.82rem', color: 'var(--green)', margin: 0 }}>
-                          ✦ Welcome to Cypherpunk, Builder.
+                        <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.82rem', color: '#00FF88', margin: 0 }}>
+                          ✦ Welcome to CyberPhunk, Builder.
                         </p>
                       </div>
                     </div>
@@ -219,7 +219,7 @@ const Community = () => {
                       </div>
                       <div>
                         <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, marginBottom: 2, color: 'var(--text-primary)' }}>{s.name}</div>
-                        <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--cyan)', marginBottom: 4 }}>{s.handle}</div>
+                        <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--primary)', marginBottom: 4 }}>{s.handle}</div>
                         <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--text-muted)' }}>{s.desc}</div>
                       </div>
                       <i className="bi bi-arrow-right ms-auto" style={{ color: 'var(--text-muted)' }}></i>
@@ -245,9 +245,9 @@ const Community = () => {
                 </p>
                 <div className="d-flex flex-column gap-4">
                   {[
-                    { icon: 'bi-envelope-fill', label: 'General Inquiries', value: 'hello@cypherpunk.io', color: 'var(--cyan)' },
-                    { icon: 'bi-briefcase-fill', label: 'Partnerships', value: 'partners@cypherpunk.io', color: 'var(--pink)' },
-                    { icon: 'bi-code-slash', label: 'Technical Issues', value: 'dev@cypherpunk.io', color: 'var(--gold)' },
+                    { icon: 'bi-envelope-fill', label: 'General Inquiries', value: 'hello@cyberphunk.io', color: 'var(--primary)' },
+                    { icon: 'bi-briefcase-fill', label: 'Partnerships', value: 'partners@cyberphunk.io', color: 'var(--secondary)' },
+                    { icon: 'bi-code-slash', label: 'Technical Issues', value: 'dev@cyberphunk.io', color: 'var(--accent)' },
                   ].map(({ icon, label, value, color }) => (
                     <div key={label} className="d-flex align-items-center gap-3">
                       <div style={{ width: 44, height: 44, borderRadius: 10, background: `${color}15`, border: `1px solid ${color}40`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -268,8 +268,8 @@ const Community = () => {
                 <div className="glass-card p-5">
                   {contactStatus === 'success' ? (
                     <div className="text-center py-4">
-                      <i className="bi bi-send-check-fill" style={{ fontSize: '3rem', color: 'var(--green)', display: 'block', marginBottom: 16 }}></i>
-                      <h5 style={{ fontFamily: 'var(--font-heading)', color: 'var(--green)', marginBottom: 8 }}>Message Received!</h5>
+                      <i className="bi bi-send-check-fill" style={{ fontSize: '3rem', color: '#00FF88', display: 'block', marginBottom: 16 }}></i>
+                      <h5 style={{ fontFamily: 'var(--font-heading)', color: '#00FF88', marginBottom: 8 }}>Message Received!</h5>
                       <p style={{ color: 'var(--text-secondary)' }}>Transmission successful. We'll respond within 48 hours.</p>
                       <button className="btn-neon mt-3" onClick={() => setContactStatus('')}>Send Another</button>
                     </div>
@@ -296,7 +296,7 @@ const Community = () => {
                           ></textarea>
                         </div>
                         <div className="col-12">
-                          <button type="submit" className="btn-solid-cyan w-100" disabled={contactStatus === 'loading'} style={{ padding: '14px', fontSize: '1rem' }}>
+                          <button type="submit" className="btn-solid-primary w-100" disabled={contactStatus === 'loading'} style={{ padding: '14px', fontSize: '1rem' }}>
                             {contactStatus === 'loading' ? (
                               <><i className="bi bi-hourglass-split me-2"></i>Sending...</>
                             ) : (
@@ -315,7 +315,7 @@ const Community = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="section-pad" style={{ background: 'linear-gradient(135deg, rgba(0,255,255,0.06), rgba(255,0,127,0.06))', borderTop: '1px solid var(--border-glass)' }}>
+      <section className="section-pad" style={{ background: 'linear-gradient(135deg, rgba(255,107,0,0.06), rgba(255,61,0,0.06))', borderTop: '1px solid var(--border-glass)' }}>
         <div className="container text-center">
           <ScrollReveal>
             <div style={{ fontSize: '3rem', marginBottom: 20 }}>⚡</div>
@@ -326,7 +326,7 @@ const Community = () => {
               "We know that software can't be destroyed and that a widely dispersed system can't be shut down."<br />
               <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.82rem', color: 'var(--text-muted)' }}>— Cypherpunk Manifesto, 1993</span>
             </p>
-            <Link to="/programs" className="btn-solid-cyan" style={{ padding: '16px 50px', fontSize: '1.1rem' }}>
+            <Link to="/programs" className="btn-solid-primary" style={{ padding: '16px 50px', fontSize: '1.1rem' }}>
               <i className="bi bi-lightning-charge-fill me-2"></i>Start Your Journey
             </Link>
           </ScrollReveal>

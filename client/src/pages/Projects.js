@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ScrollReveal from '../components/ScrollReveal';
 import axios from 'axios';
 
@@ -10,7 +10,7 @@ const FALLBACK_PROJECTS = [
   { id: 3, title: 'DAOforge — No-Code DAO Builder', description: 'Create and manage decentralized autonomous organizations without code. Voting, treasury, and proposals.', category: 'dao', tags: 'dao,governance,nocode', image_url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800', github_url: '#', live_url: null, author: 'CryptoCraft Labs', is_featured: 0 },
   { id: 4, title: 'SolanaStream — Real-Time DeFi Analytics', description: 'Monitor DeFi positions and wallet activity across Solana ecosystem in real-time. Yield optimizer included.', category: 'defi', tags: 'solana,analytics,defi', image_url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800', github_url: '#', live_url: null, author: 'BlockScope', is_featured: 0 },
   { id: 5, title: 'ZKVote — Private On-Chain Voting', description: 'Decentralized voting using ZK-proofs to ensure ballot privacy. Used in 3 major DAO elections.', category: 'privacy', tags: 'voting,zkproofs,dao', image_url: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800', github_url: '#', live_url: '#', author: 'PrivacyFirst', is_featured: 0 },
-  { id: 6, title: 'CypherBadge — Soulbound NFTs', description: 'Non-transferable NFTs that certify Web3 skills. Your on-chain resume and credential system.', category: 'nft', tags: 'nft,soulbound,identity', image_url: 'https://images.unsplash.com/photo-1646753522408-077ef9839300?w=800', github_url: '#', live_url: '#', author: 'Cypherpunk Team', is_featured: 1 },
+  { id: 6, title: 'CyberBadge — Soulbound NFTs', description: 'Non-transferable NFTs that certify Web3 skills. Your on-chain resume and credential system.', category: 'nft', tags: 'nft,soulbound,identity', image_url: 'https://images.unsplash.com/photo-1646753522408-077ef9839300?w=800', github_url: '#', live_url: '#', author: 'CyberPhunk Team', is_featured: 1 },
   { id: 7, title: 'MeshNet — P2P Encrypted Messaging', description: 'Browser-based P2P encrypted messaging with no central server. No accounts, no logs, no trace.', category: 'privacy', tags: 'privacy,p2p,messaging', image_url: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800', github_url: '#', live_url: '#', author: 'CipherDev Team', is_featured: 0 },
   { id: 8, title: 'LiquidGov — Cross-Chain Governance', description: 'Vote on protocol proposals across 10+ blockchains using a single interface. Liquid democracy.', category: 'dao', tags: 'dao,crosschain,governance', image_url: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800', github_url: '#', live_url: null, author: 'MultiChain Labs', is_featured: 0 },
 ];
@@ -23,8 +23,8 @@ const CATEGORIES = [
   { id: 'dao', label: 'DAO', icon: 'bi-people' },
 ];
 
-const categoryColors = { defi: 'var(--cyan)', nft: 'var(--pink)', privacy: 'var(--gold)', dao: 'var(--green)', tool: 'var(--purple)', other: 'var(--text-secondary)' };
-const tagColors = ['tag-cyan', 'tag-pink', 'tag-gold', 'tag-green', 'tag-purple'];
+const categoryColors = { defi: 'var(--primary)', nft: 'var(--secondary)', privacy: 'var(--accent)', dao: '#00FF88', tool: '#9B59B6', other: 'var(--text-secondary)' };
+const tagColors = ['tag-primary', 'tag-secondary', 'tag-accent', 'tag-green', 'tag-purple'];
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -43,7 +43,7 @@ const Projects = () => {
     <>
       {/* Hero */}
       <section style={{ paddingTop: '140px', paddingBottom: '80px', background: 'linear-gradient(to bottom, var(--bg-surface), var(--bg-deep))', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(0,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,255,0.03) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,107,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,0,0.03) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <ScrollReveal>
             <span className="section-label"><i className="bi bi-grid-3x3-gap me-2"></i>Showcase</span>
@@ -51,7 +51,7 @@ const Projects = () => {
               Community <br /><span className="gradient-text">Projects</span>
             </h1>
             <p className="section-subtitle">
-              Explore cutting-edge Web3 projects built by the Cypherpunk community — from privacy tools and DeFi protocols to NFT platforms and DAO infrastructure.
+              Explore cutting-edge Web3 projects built by the CyberPhunk community — from collaboration tools and DeFi protocols to NFT platforms and DAO infrastructure.
             </p>
           </ScrollReveal>
         </div>
@@ -70,7 +70,7 @@ const Projects = () => {
                   </div>
                   <div className="col-md-7 p-5 d-flex flex-column justify-content-center">
                     <div className="d-flex align-items-center gap-3 mb-3">
-                      <span style={{ background: 'rgba(255,215,0,0.15)', color: 'var(--gold)', border: '1px solid rgba(255,215,0,0.3)', padding: '4px 14px', borderRadius: 20, fontFamily: 'var(--font-mono)', fontSize: '0.72rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+                      <span style={{ background: 'rgba(255,107,0,0.15)', color: 'var(--primary)', border: '1px solid rgba(255,107,0,0.3)', padding: '4px 14px', borderRadius: 20, fontFamily: 'var(--font-mono)', fontSize: '0.72rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
                         <i className="bi bi-star-fill me-1"></i>Featured
                       </span>
                       <span style={{ background: `${categoryColors[featured.category]}18`, color: categoryColors[featured.category], border: `1px solid ${categoryColors[featured.category]}40`, padding: '4px 14px', borderRadius: 20, fontFamily: 'var(--font-mono)', fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
@@ -85,7 +85,7 @@ const Projects = () => {
                       ))}
                     </div>
                     <div className="d-flex gap-3 flex-wrap">
-                      {featured.live_url && <a href={featured.live_url} target="_blank" rel="noopener noreferrer" className="btn-solid-cyan" style={{ padding: '10px 24px', fontSize: '0.9rem' }}><i className="bi bi-box-arrow-up-right me-1"></i>Live Demo</a>}
+                      {featured.live_url && <a href={featured.live_url} target="_blank" rel="noopener noreferrer" className="btn-solid-primary" style={{ padding: '10px 24px', fontSize: '0.9rem' }}><i className="bi bi-box-arrow-up-right me-1"></i>Live Demo</a>}
                       {featured.github_url && <a href={featured.github_url} target="_blank" rel="noopener noreferrer" className="btn-neon" style={{ padding: '10px 24px', fontSize: '0.9rem' }}><i className="bi bi-github me-1"></i>GitHub</a>}
                     </div>
                     <div style={{ marginTop: 20, fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
@@ -130,7 +130,7 @@ const Projects = () => {
                     <div style={{ overflow: 'hidden', position: 'relative' }}>
                       <img src={proj.image_url} alt={proj.title} className="project-card-img" onError={e => { e.target.src = 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800'; }} />
                       {proj.is_featured ? (
-                        <div style={{ position: 'absolute', top: 12, right: 12, background: 'rgba(255,215,0,0.9)', color: '#000', padding: '4px 10px', borderRadius: 20, fontFamily: 'var(--font-mono)', fontSize: '0.68rem', fontWeight: 700 }}>
+                        <div style={{ position: 'absolute', top: 12, right: 12, background: 'rgba(255,107,0,0.9)', color: '#000', padding: '4px 10px', borderRadius: 20, fontFamily: 'var(--font-mono)', fontSize: '0.68rem', fontWeight: 700 }}>
                           <i className="bi bi-star-fill me-1"></i>FEATURED
                         </div>
                       ) : null}
@@ -189,14 +189,14 @@ const Projects = () => {
         <div className="container">
           <ScrollReveal>
             <div className="glass-card p-5 text-center" style={{ maxWidth: 700, margin: '0 auto' }}>
-              <i className="bi bi-plus-circle-fill" style={{ fontSize: '2.5rem', color: 'var(--cyan)', display: 'block', marginBottom: 16 }}></i>
+              <i className="bi bi-plus-circle-fill" style={{ fontSize: '2.5rem', color: 'var(--primary)', display: 'block', marginBottom: 16 }}></i>
               <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, marginBottom: 12 }}>
                 Built Something <span className="gradient-text">Awesome?</span>
               </h3>
               <p style={{ color: 'var(--text-secondary)', marginBottom: 24, maxWidth: 500, margin: '0 auto 24px' }}>
-                Submit your Web3 project to be featured in the Cypherpunk showcase. We highlight the best community-built tools and experiments.
+                Submit your Web3 project to be featured in the CyberPhunk showcase. We highlight the best community-built tools and experiments.
               </p>
-              <a href="mailto:projects@cypherpunk.io" className="btn-solid-cyan" style={{ padding: '12px 32px' }}>
+              <a href="mailto:projects@cyberphunk.io" className="btn-solid-primary" style={{ padding: '12px 32px' }}>
                 <i className="bi bi-send-fill me-2"></i>Submit Your Project
               </a>
             </div>

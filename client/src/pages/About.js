@@ -17,7 +17,7 @@ const TIMELINE = [
   { year: '2008', event: 'Satoshi Nakamoto releases the Bitcoin whitepaper. Cypherpunk philosophy meets money.' },
   { year: '2015', event: 'Ethereum launches. Smart contracts make programmable money a reality.' },
   { year: '2020', event: 'DeFi Summer. Billions flow into decentralized protocols. No permission needed.' },
-  { year: '2022', event: 'Cypherpunk founded. A platform to educate, build, and unite the community.' },
+  { year: '2022', event: 'CyberPhunk founded. A platform to educate, build, and unite the community.' },
   { year: '2026', event: 'Present. 5,000+ members. 12 hackathons. 240+ projects. The revolution continues.' },
 ];
 
@@ -25,8 +25,8 @@ const PARTNERS = [
   { name: 'Ethereum Foundation', icon: 'bi-hexagon-fill', color: '#627EEA' },
   { name: 'Bitcoin Magazine', icon: 'bi-currency-bitcoin', color: '#F7931A' },
   { name: 'Solana Foundation', icon: 'bi-lightning-charge-fill', color: '#9945FF' },
-  { name: 'Crypto.com', icon: 'bi-shield-check', color: '#00FFFF' },
-  { name: 'Dev3Pack', icon: 'bi-code-slash', color: '#FF007F' },
+  { name: 'Crypto.com', icon: 'bi-shield-check', color: '#FF6B00' },
+  { name: 'Dev3Pack', icon: 'bi-code-slash', color: '#FF3D00' },
   { name: 'Devcon', icon: 'bi-people-fill', color: '#FFD700' },
 ];
 
@@ -37,7 +37,7 @@ const About = () => {
     <>
       {/* Page Hero */}
       <section style={{ paddingTop: '140px', paddingBottom: '80px', background: 'linear-gradient(to bottom, var(--bg-surface), var(--bg-deep))', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(0,255,255,0.1) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,107,0,0.1) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <ScrollReveal>
             <span className="section-label"><i className="bi bi-info-circle me-2"></i>Our Story</span>
@@ -45,7 +45,7 @@ const About = () => {
               Who We Are &<br /><span className="gradient-text">Why We Exist</span>
             </h1>
             <p className="section-subtitle">
-              Cypherpunk is a Web3 community platform born from the cypherpunk ethos — the belief that code is the ultimate instrument of freedom, privacy, and human sovereignty.
+              CyberPhunk is a Web3 community platform built for the next generation of builders, focused on collaboration, networking, and verifiable on-chain reputation.
             </p>
           </ScrollReveal>
         </div>
@@ -60,17 +60,17 @@ const About = () => {
                 <span className="section-label"><i className="bi bi-flag me-2"></i>Our Mission</span>
                 <h2 className="section-title">Building the <span className="gradient-text">Decentralized Future</span></h2>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.9, marginBottom: 20 }}>
-                  We exist to educate, equip, and connect the next generation of Web3 builders. From blockchain fundamentals to advanced cryptography, our programs are designed to turn curious minds into cypherpunk engineers.
+                  We exist to educate, equip, and connect the next generation of Web3 builders. From blockchain fundamentals to advanced cryptography, our programs are designed to turn curious minds into world-class engineers.
                 </p>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.9, marginBottom: 32 }}>
-                  We believe in open-source code, privacy by default, decentralized governance, and financial sovereignty for all — regardless of geography, nationality, or background.
+                  We believe in open-source code, collaboration by default, and creating a marketplace for talent that rewards real contribution.
                 </p>
                 <div className="row g-3">
                   {[
-                    { icon: 'bi-shield-lock', label: 'Privacy First', color: 'var(--cyan)' },
-                    { icon: 'bi-code-slash', label: 'Open Source', color: 'var(--pink)' },
-                    { icon: 'bi-globe2', label: 'Decentralized', color: 'var(--gold)' },
-                    { icon: 'bi-people', label: 'Community Led', color: 'var(--green)' },
+                    { icon: 'bi-shield-lock', label: 'Privacy First', color: 'var(--primary)' },
+                    { icon: 'bi-code-slash', label: 'Open Source', color: 'var(--secondary)' },
+                    { icon: 'bi-globe2', label: 'Decentralized', color: 'var(--accent)' },
+                    { icon: 'bi-people', label: 'Community Led', color: '#00FF88' },
                   ].map(({ icon, label, color }) => (
                     <div className="col-6" key={label}>
                       <div className="glass-card p-3 d-flex align-items-center gap-3">
@@ -85,16 +85,16 @@ const About = () => {
 
             <div className="col-lg-6">
               <ScrollReveal delay={200}>
-                <div style={{ padding: '40px', background: 'linear-gradient(135deg, rgba(0,255,255,0.05), rgba(255,0,127,0.05))', border: '1px solid var(--border-glass)', borderRadius: 'var(--radius-lg)' }}>
-                  <div style={{ fontFamily: 'var(--font-heading)', fontSize: '5rem', fontWeight: 700, color: 'rgba(0,255,255,0.1)', lineHeight: 1, marginBottom: 8 }}>"</div>
+                <div style={{ padding: '40px', background: 'linear-gradient(135deg, rgba(255,107,0,0.05), rgba(255,61,0,0.05))', border: '1px solid var(--border-glass)', borderRadius: 'var(--radius-lg)' }}>
+                  <div style={{ fontFamily: 'var(--font-heading)', fontSize: '5rem', fontWeight: 700, color: 'rgba(255,107,0,0.1)', lineHeight: 1, marginBottom: 8 }}>"</div>
                   <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', lineHeight: 1.7, color: 'var(--text-primary)', fontWeight: 500 }}>
-                    We are the cypherpunks. We don't ask for privacy — <span style={{ color: 'var(--cyan)' }}>we build it</span>. We don't wait for permission — <span style={{ color: 'var(--pink)' }}>we write code</span>.
+                    The future belongs to those who build it. <span style={{ color: 'var(--primary)' }}>CyberPhunk</span> is where builders connect, collaborate, and create.
                   </p>
                   <div style={{ marginTop: 24, display: 'flex', alignItems: 'center', gap: 12 }}>
-                    <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'var(--cyan)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--bg-deep)', fontWeight: 700, fontSize: '0.9rem' }}>CP</div>
+                    <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--bg-deep)', fontWeight: 700, fontSize: '0.9rem' }}>CP</div>
                     <div>
-                      <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}>Cypherpunk Collective</div>
-                      <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: 'var(--text-muted)' }}>Est. 2022 — Decentralized</div>
+                      <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}>CyberPhunk Collective</div>
+                      <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: 'var(--text-muted)' }}>Est. 2024 — Decentralized</div>
                     </div>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ const About = () => {
           <ScrollReveal>
             <div className="text-center mb-5">
               <span className="section-label"><i className="bi bi-clock-history me-2"></i>History</span>
-              <h2 className="section-title">The Cypherpunk <span className="gradient-text">Timeline</span></h2>
+              <h2 className="section-title">The CyberPhunk <span className="gradient-text">Timeline</span></h2>
             </div>
           </ScrollReveal>
           <div className="row justify-content-center">
@@ -119,7 +119,7 @@ const About = () => {
                 {TIMELINE.map((item, i) => (
                   <ScrollReveal key={i} delay={i * 100}>
                     <div className="timeline-item">
-                      <div className="timeline-dot" style={{ background: i % 2 === 0 ? 'var(--cyan)' : 'var(--pink)', boxShadow: i % 2 === 0 ? 'var(--glow-cyan)' : 'var(--glow-pink)' }}></div>
+                      <div className="timeline-dot"></div>
                       <div className="timeline-year">{item.year}</div>
                       <p style={{ color: 'var(--text-secondary)', margin: 0, lineHeight: 1.7 }}>{item.event}</p>
                     </div>
@@ -159,13 +159,13 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="section-pad" style={{ background: 'var(--bg-surface)' }}>
+      <section className="section-pad" style={{ background: 'var(--bg-deep)' }}>
         <div className="container">
           <ScrollReveal>
             <div className="text-center mb-5">
               <span className="section-label"><i className="bi bi-people me-2"></i>The Team</span>
               <h2 className="section-title">Meet the <span className="gradient-text">Builders</span></h2>
-              <p className="section-subtitle mx-auto">The people behind Cypherpunk — cypherpunks, engineers, educators, and community builders.</p>
+              <p className="section-subtitle mx-auto">The people behind CyberPhunk — engineers, educators, and community builders.</p>
             </div>
           </ScrollReveal>
           <div className="row g-4">
@@ -179,7 +179,7 @@ const About = () => {
                   >
                     <img src={member.avatar} alt={member.name} className="team-avatar" />
                     <h5 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, marginBottom: 4 }}>{member.name}</h5>
-                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: 'var(--cyan)', marginBottom: 12 }}>{member.role}</div>
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: 'var(--primary)', marginBottom: 12 }}>{member.role}</div>
                     {expandedMember === i && (
                       <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: 16 }}>{member.bio}</p>
                     )}
@@ -228,10 +228,10 @@ const About = () => {
             <h2 className="section-title">Ready to <span className="gradient-text">Join Us?</span></h2>
             <p className="section-subtitle mx-auto mb-5">Become part of the movement. No permission required.</p>
             <div className="d-flex justify-content-center gap-3 flex-wrap">
-              <Link to="/community" className="btn-solid-cyan" style={{ padding: '14px 40px' }}>
+              <button type="submit" className="btn-solid-primary w-100" disabled={status === 'loading'}>
                 <i className="bi bi-person-plus-fill"></i> Join Community
-              </Link>
-              <Link to="/programs" className="btn-neon btn-neon-pink" style={{ padding: '14px 40px' }}>
+              </button>
+              <Link to="/programs" className="btn-neon btn-neon-secondary" style={{ padding: '14px 40px' }}>
                 <i className="bi bi-calendar-event"></i> View Programs
               </Link>
             </div>

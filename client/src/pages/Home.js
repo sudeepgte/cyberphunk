@@ -10,15 +10,15 @@ const API = 'http://localhost:5000/api';
 
 // Fallback data in case backend is not connected
 const FALLBACK_EVENTS = [
-  { id: 1, title: 'Cypherpunk Bootcamp: Web3 Foundations', type: 'bootcamp', date: '2026-06-01', location: 'Online (Global)', description: 'A 4-week intensive program covering blockchain fundamentals, smart contract development, and DeFi protocols.' },
-  { id: 2, title: 'Global Cypherpunk Hackathon 2026', type: 'hackathon', date: '2026-07-15', location: 'Berlin + Online', description: '72-hour global hackathon focused on privacy-preserving technologies. $50,000 in prizes.' },
+  { id: 1, title: 'CyberPhunk Bootcamp: Web3 Foundations', type: 'bootcamp', date: '2026-06-01', location: 'Online (Global)', description: 'A 4-week intensive program covering blockchain fundamentals, smart contract development, and DeFi protocols.' },
+  { id: 2, title: 'Global CyberPhunk Hackathon 2026', type: 'hackathon', date: '2026-07-15', location: 'Berlin + Online', description: '72-hour global hackathon focused on privacy-preserving technologies. $50,000 in prizes.' },
   { id: 3, title: 'Web3 Accelerator Program — Cohort 3', type: 'accelerator', date: '2026-08-10', location: 'Singapore + Dubai', description: '12-week accelerator for early-stage Web3 startups. Mentorship and $25K seed investment.' },
 ];
 
 const FALLBACK_POSTS = [
-  { id: 1, slug: 'cypherpunk-manifesto-privacy', title: 'The Cypherpunk Manifesto: Why Privacy Is Not Optional', category: 'Privacy', author: 'Eric Hughes', thumbnail: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800', excerpt: 'Revisiting the seminal 1993 document that predicted the privacy battles of the digital age.' },
-  { id: 2, slug: 'bitcoin-15-years-global-reserve', title: 'Bitcoin at 15: From Cypherpunk Dream to Global Reserve', category: 'Bitcoin', author: 'Satoshi Nakamoto', thumbnail: 'https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800', excerpt: 'How a white paper transformed from a mailing list post to the foundation of a $1 trillion asset class.' },
-  { id: 3, slug: 'defi-summer-3-protocols', title: 'DeFi Summer 3.0: The Protocols Rewriting Finance', category: 'DeFi', author: 'Vitalik Buterin', thumbnail: 'https://images.unsplash.com/photo-1642790551116-18e150f248e3?w=800', excerpt: 'A deep dive into the latest wave of decentralized finance protocols challenging traditional banking.' },
+  { id: 1, slug: 'cyberphunk-manifesto-privacy', title: 'The CyberPhunk Ethos: Why Privacy Is Not Optional', category: 'Privacy', author: 'CyberPhunk Core', thumbnail: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800', excerpt: 'Revisiting the seminal principles that predicted the privacy battles of the digital age.' },
+  { id: 2, slug: 'bitcoin-15-years-global-reserve', title: 'Bitcoin at 15: From CyberPhunk Dream to Global Reserve', category: 'Bitcoin', author: 'Satoshi Nakamoto', thumbnail: 'https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800', excerpt: 'How a white paper transformed from a mailing list post to the foundation of a $1 trillion asset class.' },
+  { id: 3, slug: 'defi-summer-3-protocols', title: 'DeFi Summer 3.0: The Protocols Rewriting Finance', category: 'DeFi', author: 'CyberPhunk Labs', thumbnail: 'https://images.unsplash.com/photo-1642790551116-18e150f248e3?w=800', excerpt: 'A deep dive into the latest wave of decentralized finance protocols challenging traditional banking.' },
 ];
 
 const PARTNERS = [
@@ -110,8 +110,8 @@ const Home = () => {
 
               <h1 className="hero-title mb-4">
                 <span className="d-block hero-line-1" style={{ color: 'var(--text-primary)', opacity: 0 }}>DEFY</span>
-                <span className="d-block neon-text-cyan hero-line-2" style={{ minHeight: '1.1em', opacity: 0 }}>
-                  {typed}<span style={{ animation: 'neon-flicker 1s infinite', color: 'var(--pink)' }}>|</span>
+                <span className="d-block neon-text-primary hero-line-2" style={{ minHeight: '1.1em', opacity: 0 }}>
+                  {typed}<span style={{ animation: 'neon-flicker 1s infinite', color: 'var(--secondary)' }}>|</span>
                 </span>
                 <span className="d-block gradient-text hero-line-3" style={{ opacity: 0 }}>WITH CODE</span>
               </h1>
@@ -121,8 +121,8 @@ const Home = () => {
               </p>
 
               <div className="d-flex flex-wrap gap-3 hero-cta-row" style={{ opacity: 0 }}>
-                <Link to="/community" className="btn-solid-cyan" style={{ padding: '14px 36px', fontSize: '1rem' }}>
-                  <i className="bi bi-lightning-charge-fill"></i> Join the Revolution
+                <Link to="/community" className="btn-solid-primary" style={{ padding: '14px 36px', fontSize: '1rem' }}>
+                  <i className="bi bi-discord"></i> Join Discord
                 </Link>
                 <Link to="/projects" className="btn-neon">
                   <i className="bi bi-grid-3x3-gap"></i> Explore Projects
@@ -158,8 +158,8 @@ const Home = () => {
                     animation: 'border-dance 4s infinite reverse',
                   }}>
                     <div style={{ textAlign: 'center' }}>
-                      <div style={{ fontFamily: 'var(--font-heading)', fontSize: '3rem', fontWeight: 700, color: 'var(--cyan)', lineHeight: 1, textShadow: '0 0 30px rgba(0,255,255,0.8)' }}>CP</div>
-                      <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--text-muted)', letterSpacing: '0.3em', marginTop: '6px' }}>CYPHERPUNK</div>
+                      <div style={{ fontFamily: 'var(--font-heading)', fontSize: '3rem', fontWeight: 700, color: 'var(--primary)', lineHeight: 1, textShadow: '0 0 30px rgba(255,107,0,0.8)' }}>CP</div>
+                      <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--text-muted)', letterSpacing: '0.3em', marginTop: '6px' }}>CYBERPHUNK</div>
                     </div>
                   </div>
                 </div>
@@ -241,13 +241,13 @@ const Home = () => {
             <div className="col-lg-6">
               <ScrollReveal delay={200}>
                 <div className="glass-card p-4" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.82rem', lineHeight: 2, color: 'var(--text-secondary)' }}>
-                  <div style={{ color: 'var(--cyan)', marginBottom: 12, fontSize: '0.75rem', letterSpacing: '0.2em' }}>// CYPHERPUNK_CORE.js</div>
-                  <div><span style={{ color: 'var(--pink)' }}>const</span> <span style={{ color: 'var(--gold)' }}>mission</span> = {'{'}</div>
-                  <div style={{ paddingLeft: 24 }}><span style={{ color: 'var(--cyan)' }}>privacy</span>: <span style={{ color: 'var(--green)' }}>"non-negotiable"</span>,</div>
-                  <div style={{ paddingLeft: 24 }}><span style={{ color: 'var(--cyan)' }}>tools</span>: <span style={{ color: 'var(--green)' }}>"open-source forever"</span>,</div>
-                  <div style={{ paddingLeft: 24 }}><span style={{ color: 'var(--cyan)' }}>identity</span>: <span style={{ color: 'var(--green)' }}>"self-sovereign"</span>,</div>
-                  <div style={{ paddingLeft: 24 }}><span style={{ color: 'var(--cyan)' }}>censorship</span>: <span style={{ color: 'var(--pink)' }}>null</span>,</div>
-                  <div style={{ paddingLeft: 24 }}><span style={{ color: 'var(--cyan)' }}>motto</span>: <span style={{ color: 'var(--green)' }}>"Cypherpunks write code"</span></div>
+                  <div style={{ color: 'var(--primary)', marginBottom: 12, fontSize: '0.75rem', letterSpacing: '0.2em' }}>// CYBERPHUNK_CORE.js</div>
+                  <div><span style={{ color: 'var(--secondary)' }}>const</span> <span style={{ color: 'var(--accent)' }}>mission</span> = {'{'}</div>
+                  <div style={{ paddingLeft: 24 }}><span style={{ color: 'var(--primary)' }}>innovation</span>: <span style={{ color: '#00FF88' }}>"non-negotiable"</span>,</div>
+                  <div style={{ paddingLeft: 24 }}><span style={{ color: 'var(--primary)' }}>tools</span>: <span style={{ color: '#00FF88' }}>"open-source forever"</span>,</div>
+                  <div style={{ paddingLeft: 24 }}><span style={{ color: 'var(--primary)' }}>identity</span>: <span style={{ color: '#00FF88' }}>"self-sovereign"</span>,</div>
+                  <div style={{ paddingLeft: 24 }}><span style={{ color: 'var(--primary)' }}>centralization</span>: <span style={{ color: 'var(--secondary)' }}>null</span>,</div>
+                  <div style={{ paddingLeft: 24 }}><span style={{ color: 'var(--primary)' }}>motto</span>: <span style={{ color: '#00FF88' }}>"Builders connect, collaborate, create"</span></div>
                   <div>{'}'}</div>
                   <div style={{ marginTop: 12 }}><span style={{ color: 'var(--purple)' }}>export default</span> mission;</div>
                 </div>
@@ -311,9 +311,9 @@ const Home = () => {
             <div className="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5">
               <div>
                 <span className="section-label"><i className="bi bi-newspaper me-2"></i>Latest News</span>
-                <h2 className="section-title mb-0">From the <span className="gradient-text-gold">Cryptosphere</span></h2>
+                <h2 className="section-title mb-0">From the <span className="gradient-text-accent">Cryptosphere</span></h2>
               </div>
-              <Link to="/blog" className="btn-neon btn-neon-gold" style={{ padding: '10px 24px', fontSize: '0.9rem' }}>
+              <Link to="/blog" className="btn-neon btn-neon-accent" style={{ padding: '10px 24px', fontSize: '0.9rem' }}>
                 All Articles <i className="bi bi-arrow-right ms-1"></i>
               </Link>
             </div>
@@ -394,10 +394,10 @@ const Home = () => {
               Join thousands of builders, hackers, and privacy advocates who are shaping the decentralized future. No permission required.
             </p>
             <div className="d-flex flex-wrap justify-content-center gap-3">
-              <Link to="/community" className="btn-solid-cyan" style={{ padding: '16px 44px', fontSize: '1.05rem' }}>
-                <i className="bi bi-lightning-charge-fill"></i> Join Cypherpunk
+              <Link to="/community" className="btn-solid-primary" style={{ padding: '16px 44px', fontSize: '1.05rem' }}>
+                <i className="bi bi-discord"></i> Join CyberPhunk
               </Link>
-              <Link to="/programs" className="btn-neon btn-neon-pink" style={{ padding: '16px 44px', fontSize: '1.05rem' }}>
+              <Link to="/programs" className="btn-neon btn-neon-secondary" style={{ padding: '16px 44px', fontSize: '1.05rem' }}>
                 <i className="bi bi-calendar-event"></i> View Programs
               </Link>
             </div>

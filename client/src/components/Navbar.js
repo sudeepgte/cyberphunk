@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="container">
         {/* Brand */}
         <Link to="/" className="navbar-brand ag-brand">
-          CYPHER<span>PUNK</span>
+          CYBER<span>PHUNK</span>
         </Link>
 
         {/* Hamburger */}
@@ -58,8 +58,8 @@ const Navbar = () => {
               </li>
             ))}
             <li className="nav-item ms-lg-3 mt-2 mt-lg-0">
-              <Link to="/community" className="btn-neon btn-neon-pink" style={{ padding: '8px 22px', fontSize: '0.85rem' }}>
-                <i className="bi bi-lightning-charge-fill"></i> Join Now
+              <Link to="/community" className="btn-neon btn-neon-secondary" style={{ padding: '8px 22px', fontSize: '0.85rem' }}>
+                <i className="bi bi-discord"></i> Join Discord
               </Link>
             </li>
           </ul>

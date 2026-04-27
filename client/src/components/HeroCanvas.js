@@ -26,11 +26,11 @@ const HeroCanvas = () => {
     const sizes = new Float32Array(particleCount);
 
     const colorOptions = [
-      new THREE.Color('#00FFFF'),
-      new THREE.Color('#FF007F'),
-      new THREE.Color('#FFD700'),
-      new THREE.Color('#9B59B6'),
-      new THREE.Color('#00FF88'),
+      new THREE.Color('#FF6B00'), // Primary Orange
+      new THREE.Color('#FF8C00'), // Dark Orange
+      new THREE.Color('#FFB300'), // Amber
+      new THREE.Color('#FF3D00'), // Reddish Orange
+      new THREE.Color('#444444'), // Dark Grey (for depth)
     ];
 
     for (let i = 0; i < particleCount; i++) {
@@ -67,9 +67,9 @@ const HeroCanvas = () => {
 
     // Connecting lines (blockchain network effect)
     const lineMaterial = new THREE.LineBasicMaterial({
-      color: 0x00FFFF,
+      color: 0xFF6B00,
       transparent: true,
-      opacity: 0.06,
+      opacity: 0.1,
       blending: THREE.AdditiveBlending,
     });
 

@@ -17,10 +17,10 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="col-lg-4 col-md-6">
             <div className="ag-brand mb-3" style={{ fontSize: '1.8rem' }}>
-              CYPHER<span>PUNK</span>
+              CYBER<span>PHUNK</span>
             </div>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.8 }}>
-              The cypherpunk community platform for Web3 builders, privacy advocates, and digital sovereignty warriors.
+              The Web3 community platform for builders, hackers, and privacy advocates. Built for the decentralized future.
             </p>
             <div className="d-flex gap-2 mt-4">
               {[
@@ -46,7 +46,7 @@ const Footer = () => {
 
           {/* Navigation */}
           <div className="col-lg-2 col-md-6 col-6">
-            <h6 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', letterSpacing: '0.2em', color: 'var(--cyan)', textTransform: 'uppercase', marginBottom: '20px' }}>
+            <h6 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', letterSpacing: '0.2em', color: 'var(--primary)', textTransform: 'uppercase', marginBottom: '20px' }}>
               Navigate
             </h6>
             <ul className="list-unstyled" style={{ lineHeight: 2.2 }}>
@@ -60,7 +60,7 @@ const Footer = () => {
               ].map(({ path, label }) => (
                 <li key={path}>
                   <Link to={path} style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}
-                    onMouseEnter={e => e.target.style.color = 'var(--cyan)'}
+                    onMouseEnter={e => e.target.style.color = 'var(--primary)'}
                     onMouseLeave={e => e.target.style.color = 'var(--text-secondary)'}
                   >{label}</Link>
                 </li>
@@ -70,14 +70,14 @@ const Footer = () => {
 
           {/* Resources */}
           <div className="col-lg-2 col-md-6 col-6">
-            <h6 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', letterSpacing: '0.2em', color: 'var(--cyan)', textTransform: 'uppercase', marginBottom: '20px' }}>
+            <h6 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', letterSpacing: '0.2em', color: 'var(--primary)', textTransform: 'uppercase', marginBottom: '20px' }}>
               Resources
             </h6>
             <ul className="list-unstyled" style={{ lineHeight: 2.2 }}>
-              {['Manifesto', 'Whitepaper', 'Documentation', 'GitHub', 'Discord', 'Newsletter'].map(item => (
+              {['About Us', 'Network', 'Documentation', 'GitHub', 'Discord', 'Newsletter'].map(item => (
                 <li key={item}>
                   <a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}
-                    onMouseEnter={e => e.target.style.color = 'var(--cyan)'}
+                    onMouseEnter={e => e.target.style.color = 'var(--primary)'}
                     onMouseLeave={e => e.target.style.color = 'var(--text-secondary)'}
                   >{item}</a>
                 </li>
@@ -87,14 +87,14 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div className="col-lg-4 col-md-6">
-            <h6 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', letterSpacing: '0.2em', color: 'var(--cyan)', textTransform: 'uppercase', marginBottom: '20px' }}>
+            <h6 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', letterSpacing: '0.2em', color: 'var(--primary)', textTransform: 'uppercase', marginBottom: '20px' }}>
               Stay Informed
             </h6>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '16px' }}>
-              Get the latest news on crypto, privacy tools, and upcoming events.
+              Get the latest news on Web3, innovation, and upcoming events.
             </p>
             {subscribed ? (
-              <div style={{ color: 'var(--green)', fontFamily: 'var(--font-mono)', fontSize: '0.9rem' }}>
+              <div style={{ color: '#00FF88', fontFamily: 'var(--font-mono)', fontSize: '0.9rem' }}>
                 <i className="bi bi-check-circle-fill me-2"></i>You're in. Transmission received ✦
               </div>
             ) : (
@@ -107,16 +107,16 @@ const Footer = () => {
                   required
                   className="ag-form-control flex-grow-1"
                 />
-                <button type="submit" className="btn-solid-cyan" style={{ padding: '10px 18px', whiteSpace: 'nowrap' }}>
+                <button type="submit" className="btn-solid-primary" style={{ padding: '10px 18px', whiteSpace: 'nowrap' }}>
                   Subscribe
                 </button>
               </form>
             )}
 
             {/* Manifesto Quote */}
-            <div style={{ marginTop: '24px', padding: '16px', borderLeft: '2px solid rgba(0,255,255,0.3)', background: 'var(--bg-glass)' }}>
+            <div style={{ marginTop: '24px', padding: '16px', borderLeft: '2px solid rgba(255,107,0,0.3)', background: 'var(--bg-glass)' }}>
               <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: 1.7, margin: 0 }}>
-                "We the Cypherpunks are dedicated to building anonymous systems... <span style={{ color: 'var(--cyan)' }}>Cypherpunks write code.</span>"
+                "The future is built by those who show up. <span style={{ color: 'var(--primary)' }}>CyberPhunk is where builders connect.</span>"
               </p>
             </div>
           </div>
@@ -126,7 +126,7 @@ const Footer = () => {
 
         <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
           <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', margin: 0 }}>
-            © 2026 Cypherpunk. Built by cypherpunks, for the free world.
+            © 2026 CyberPhunk. Built for the decentralized future.
           </p>
           <div className="d-flex gap-4">
             {['Privacy Policy', 'Terms', 'Cookie Policy'].map(item => (

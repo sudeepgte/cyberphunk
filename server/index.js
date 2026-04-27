@@ -1,4 +1,4 @@
-﻿require('dotenv').config();
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -24,9 +24,9 @@ app.use('/api/contact', contactRouter);
 
 // Health check
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', message: 'Cypherpunk API running 🚀' });
+  res.json({ status: 'ok', message: 'CyberPhunk API running 🚀' });
 });
 
 app.listen(PORT, () => {
-  console.log(`\n🚀 Cypherpunk Server running on http://localhost:${PORT}`);
+  console.log(`\n🚀 CyberPhunk Server running on http://localhost:${PORT}`);
 });

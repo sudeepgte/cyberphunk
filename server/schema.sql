@@ -1,6 +1,6 @@
-﻿-- Cypherpunk Database Schema
-CREATE DATABASE IF NOT EXISTS cypherpunk;
-USE cypherpunk;
+-- CyberPhunk Database Schema
+CREATE DATABASE IF NOT EXISTS cyberphunk;
+USE cyberphunk;
 
 -- Users table
 CREATE TABLE IF NOT EXISTS users (

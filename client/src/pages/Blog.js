@@ -6,9 +6,9 @@ import axios from 'axios';
 const API = 'http://localhost:5000/api';
 
 const FALLBACK_POSTS = [
-  { id: 1, slug: 'cypherpunk-manifesto-privacy', title: 'The Cypherpunk Manifesto: Why Privacy Is Not Optional', category: 'Privacy', author: 'Eric Hughes', thumbnail: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800', excerpt: 'Revisiting the seminal 1993 document that predicted the privacy battles of the digital age — and why its lessons matter more than ever.', published_at: '2026-03-15T00:00:00Z', views: 2341 },
-  { id: 2, slug: 'bitcoin-15-years-global-reserve', title: 'Bitcoin at 15: From Cypherpunk Dream to Global Reserve', category: 'Bitcoin', author: 'Satoshi Nakamoto', thumbnail: 'https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800', excerpt: 'How Satoshi Nakamoto\'s white paper transformed from a mailing list post to the foundation of a $1 trillion asset class.', published_at: '2026-03-01T00:00:00Z', views: 4502 },
-  { id: 3, slug: 'defi-summer-3-protocols', title: 'DeFi Summer 3.0: The Protocols Rewriting Finance', category: 'DeFi', author: 'Vitalik Buterin', thumbnail: 'https://images.unsplash.com/photo-1642790551116-18e150f248e3?w=800', excerpt: 'A deep dive into the latest wave of decentralized finance protocols that are challenging traditional banking institutions.', published_at: '2026-02-20T00:00:00Z', views: 3187 },
+  { id: 1, slug: 'cyberphunk-manifesto-privacy', title: 'The CyberPhunk Ethos: Why Privacy Is Not Optional', category: 'Privacy', author: 'CyberPhunk Core', thumbnail: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800', excerpt: 'Revisiting the seminal principles that predicted the privacy battles of the digital age — and why they matter more than ever.', published_at: '2026-03-15T00:00:00Z', views: 2341 },
+  { id: 2, slug: 'bitcoin-15-years-global-reserve', title: 'Bitcoin at 15: From CyberPhunk Dream to Global Reserve', category: 'Bitcoin', author: 'Satoshi Nakamoto', thumbnail: 'https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800', excerpt: 'How Satoshi Nakamoto\'s white paper transformed from a mailing list post to the foundation of a $1 trillion asset class.', published_at: '2026-03-01T00:00:00Z', views: 4502 },
+  { id: 3, slug: 'defi-summer-3-protocols', title: 'DeFi Summer 3.0: The Protocols Rewriting Finance', category: 'DeFi', author: 'CyberPhunk Labs', thumbnail: 'https://images.unsplash.com/photo-1642790551116-18e150f248e3?w=800', excerpt: 'A deep dive into the latest wave of decentralized finance protocols that are challenging traditional banking institutions.', published_at: '2026-02-20T00:00:00Z', views: 3187 },
   { id: 4, slug: 'zero-knowledge-proofs-explained', title: 'Zero-Knowledge Proofs: The Math Behind Private Transactions', category: 'Privacy', author: 'Zooko Wilcox', thumbnail: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800', excerpt: 'Understanding ZK-SNARKs and ZK-STARKs — the cryptographic magic that enables Zcash, StarkNet, and zkSync.', published_at: '2026-02-10T00:00:00Z', views: 1876 },
   { id: 5, slug: 'nfts-beyond-art-digital-ownership', title: 'NFTs Beyond Art: The Next Chapter for Digital Ownership', category: 'NFTs', author: 'Yat Siu', thumbnail: 'https://images.unsplash.com/photo-1646753522408-077ef9839300?w=800', excerpt: 'How non-fungible tokens are evolving from profile pictures to real-world asset tokenization and digital identity.', published_at: '2026-01-28T00:00:00Z', views: 2954 },
   { id: 6, slug: 'solana-vs-ethereum-layer1-2026', title: 'Solana vs Ethereum: The Layer-1 Wars of 2026', category: 'Blockchain', author: 'Anatoly Yakovenko', thumbnail: 'https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800', excerpt: 'Analyzing technical and ecosystem differences between the two dominant smart contract platforms.', published_at: '2026-01-15T00:00:00Z', views: 5629 },
@@ -16,7 +16,7 @@ const FALLBACK_POSTS = [
 
 const CATEGORIES = ['All', 'Privacy', 'Bitcoin', 'DeFi', 'NFTs', 'Blockchain'];
 
-const catTagClass = (cat) => ({ Privacy: 'tag-gold', Bitcoin: 'tag-cyan', DeFi: 'tag-green', NFTs: 'tag-pink', Blockchain: 'tag-purple' }[cat] || 'tag-cyan');
+const catTagClass = (cat) => ({ Privacy: 'tag-accent', Bitcoin: 'tag-primary', DeFi: 'tag-green', NFTs: 'tag-secondary', Blockchain: 'tag-purple' }[cat] || 'tag-primary');
 
 const Blog = () => {
   const [posts, setPosts] = useState(FALLBACK_POSTS);
@@ -39,12 +39,12 @@ const Blog = () => {
     <>
       {/* Hero */}
       <section style={{ paddingTop: '140px', paddingBottom: '80px', background: 'linear-gradient(to bottom, var(--bg-surface), var(--bg-deep))', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,215,0,0.07) 1px, transparent 1px)', backgroundSize: '45px 45px' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,107,0,0.07) 1px, transparent 1px)', backgroundSize: '45px 45px' }} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <ScrollReveal>
             <span className="section-label"><i className="bi bi-newspaper me-2"></i>Blog & News</span>
             <h1 className="section-title" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>
-              From the <br /><span className="gradient-text-gold">Cryptosphere</span>
+              From the <br /><span className="gradient-text">Cryptosphere</span>
             </h1>
             <p className="section-subtitle">
               News, analysis, tutorials, and deep dives from the frontlines of the Web3 revolution.
@@ -98,7 +98,7 @@ const Blog = () => {
                   </div>
                   <div className="p-5 d-flex flex-column justify-content-center" style={{ flex: '1 1 340px' }}>
                     <div className="d-flex align-items-center gap-2 mb-3">
-                      <span style={{ background: 'rgba(255,215,0,0.15)', color: 'var(--gold)', border: '1px solid rgba(255,215,0,0.3)', padding: '3px 12px', borderRadius: 20, fontFamily: 'var(--font-mono)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
+                      <span style={{ background: 'rgba(255,107,0,0.15)', color: 'var(--primary)', border: '1px solid rgba(255,107,0,0.3)', padding: '3px 12px', borderRadius: 20, fontFamily: 'var(--font-mono)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
                         <i className="bi bi-star-fill me-1"></i>Featured
                       </span>
                       <span className={`tag-badge ${catTagClass(featured.category)}`}>{featured.category}</span>

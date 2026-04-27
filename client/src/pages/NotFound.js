@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
 
@@ -18,7 +18,7 @@ const NotFound = () => {
       {/* Grid background */}
       <div style={{
         position: 'absolute', inset: 0,
-        backgroundImage: 'linear-gradient(rgba(0,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,255,0.03) 1px, transparent 1px)',
+        backgroundImage: 'linear-gradient(rgba(255,107,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,0,0.03) 1px, transparent 1px)',
         backgroundSize: '60px 60px',
       }} />
 
@@ -33,10 +33,10 @@ const NotFound = () => {
               fontSize: 'clamp(8rem, 20vw, 16rem)',
               fontWeight: 700,
               lineHeight: 1,
-              color: 'var(--cyan)',
+              color: 'var(--primary)',
               display: 'block',
               marginBottom: 8,
-              textShadow: '0 0 40px rgba(0,255,255,0.4)',
+              textShadow: '0 0 40px rgba(255,107,0,0.4)',
             }}
           >
             404
@@ -45,7 +45,7 @@ const NotFound = () => {
           <div style={{
             fontFamily: 'var(--font-mono)',
             fontSize: '0.85rem',
-            color: 'var(--pink)',
+            color: 'var(--secondary)',
             letterSpacing: '0.3em',
             textTransform: 'uppercase',
             marginBottom: 24,
@@ -78,8 +78,8 @@ const NotFound = () => {
             display: 'inline-block',
             textAlign: 'left',
             padding: '20px 28px',
-            background: 'rgba(0,255,255,0.04)',
-            border: '1px solid rgba(0,255,255,0.15)',
+            background: 'rgba(255,107,0,0.04)',
+            border: '1px solid rgba(255,107,0,0.15)',
             borderRadius: 12,
             fontFamily: 'var(--font-mono)',
             fontSize: '0.82rem',
@@ -88,20 +88,20 @@ const NotFound = () => {
             marginBottom: 40,
           }}>
             <div style={{ color: 'var(--text-muted)', marginBottom: 4, fontSize: '0.72rem', letterSpacing: '0.2em' }}>// BLOCK_ERROR_LOG</div>
-            <div><span style={{ color: 'var(--pink)' }}>Error</span>: Page not found at this address</div>
-            <div><span style={{ color: 'var(--cyan)' }}>Chain</span>: Cypherpunk Network</div>
-            <div><span style={{ color: 'var(--cyan)' }}>Status</span>: <span style={{ color: 'var(--gold)' }}>404 REVERTED</span></div>
-            <div><span style={{ color: 'var(--cyan)' }}>Suggestion</span>: <span style={{ color: 'var(--green)' }}>return home()</span></div>
+            <div><span style={{ color: 'var(--secondary)' }}>Error</span>: Page not found at this address</div>
+            <div><span style={{ color: 'var(--primary)' }}>Chain</span>: CyberPhunk Network</div>
+            <div><span style={{ color: 'var(--primary)' }}>Status</span>: <span style={{ color: 'var(--accent)' }}>404 REVERTED</span></div>
+            <div><span style={{ color: 'var(--primary)' }}>Suggestion</span>: <span style={{ color: '#00FF88' }}>return home()</span></div>
           </div>
 
           <div className="d-flex justify-content-center gap-3 flex-wrap">
-            <Link to="/" className="btn-solid-cyan" style={{ padding: '13px 36px' }}>
+            <Link to="/" className="btn-solid-primary" style={{ padding: '13px 36px' }}>
               <i className="bi bi-house-fill me-2"></i>Return Home
             </Link>
             <Link to="/blog" className="btn-neon" style={{ padding: '13px 36px' }}>
               <i className="bi bi-newspaper me-2"></i>Read the Blog
             </Link>
-            <Link to="/community" className="btn-neon btn-neon-pink" style={{ padding: '13px 36px' }}>
+            <Link to="/community" className="btn-neon" style={{ padding: '13px 36px' }}>
               <i className="bi bi-people me-2"></i>Join Community
             </Link>
           </div>

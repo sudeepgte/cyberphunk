@@ -1,14 +1,14 @@
-﻿USE cypherpunk;
+USE cyberphunk;
 
 -- Sample Blog Posts
 INSERT INTO posts (title, slug, excerpt, body, author, category, tags, thumbnail) VALUES
-('The Cypherpunk Manifesto: Why Privacy Is Not Optional',
- 'cypherpunk-manifesto-privacy',
- 'Revisiting the seminal 1993 document that predicted the privacy battles of the digital age — and why its lessons matter more than ever.',
- '<p>In 1993, Eric Hughes published the Cypherpunk Manifesto. It began simply: <em>"Privacy is necessary for an open society in the electronic age."</em> Today, those words resonate with prophetic clarity...</p><p>The manifesto argued that privacy is not secrecy — it is the power to selectively reveal yourself to the world. Cypherpunks believed that code, not laws, would protect this right...</p>',
- 'Eric Hughes', 'Privacy', 'privacy,manifesto,cypherpunk', 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800'),
+('The CyberPhunk Ethos: Why Privacy Is Not Optional',
+ 'cyberphunk-manifesto-privacy',
+ 'Revisiting the seminal principles that predicted the privacy battles of the digital age — and why they matter more than ever.',
+ '<p>The digital age requires a new kind of sovereignty. Privacy is necessary for an open society. selectivity in revealing oneself to the world is the power we aim to restore to every individual...</p><p>CyberPhunk is not just a platform; it''s a movement. We believe that code, not laws, is the only reliable defense against surveillance...</p>',
+ 'CyberPhunk Core', 'Privacy', 'privacy,ethos,cyberphunk', 'https://images.unsplash.com/photo-1639762681057-408e52192e55?w=800'),
 
-('Bitcoin at 15: From Cypherpunk Dream to Global Reserve',
+('Bitcoin at 15: From CyberPhunk Dream to Global Reserve',
  'bitcoin-15-years-global-reserve',
  'How Satoshi Nakamoto''s white paper transformed from a mailing list post to the foundation of a $1 trillion asset class.',
  '<p>On October 31, 2008, an anonymous figure calling themselves Satoshi Nakamoto posted a nine-page white paper to a cryptography mailing list...</p>',
@@ -18,7 +18,7 @@ INSERT INTO posts (title, slug, excerpt, body, author, category, tags, thumbnail
  'defi-summer-3-protocols',
  'A deep dive into the latest wave of decentralized finance protocols that are challenging traditional banking institutions.',
  '<p>Decentralized Finance has matured dramatically since its explosive debut in 2020...</p>',
- 'Vitalik Buterin', 'DeFi', 'defi,ethereum,finance', 'https://images.unsplash.com/photo-1642790551116-18e150f248e3?w=800'),
+ 'CyberPhunk Labs', 'DeFi', 'defi,ethereum,finance', 'https://images.unsplash.com/photo-1642790551116-18e150f248e3?w=800'),
 
 ('Zero-Knowledge Proofs: The Math Behind Private Transactions',
  'zero-knowledge-proofs-explained',
@@ -40,22 +40,22 @@ INSERT INTO posts (title, slug, excerpt, body, author, category, tags, thumbnail
 
 -- Sample Events
 INSERT INTO events (title, type, description, date, end_date, location, capacity, registered, image_url, is_featured) VALUES
-('Cypherpunk Bootcamp: Web3 Foundations',
+('CyberPhunk Bootcamp: Web3 Foundations',
  'bootcamp',
  'A 4-week intensive program covering blockchain fundamentals, smart contract development with Solidity, wallet integration, and DeFi protocols. Perfect for developers transitioning into Web3.',
  '2026-06-01', '2026-06-28', 'Online (Global)', 200, 87, 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800', TRUE),
 
-('Global Cypherpunk Hackathon 2026',
+('Global CyberPhunk Hackathon 2026',
  'hackathon',
- '72-hour global hackathon focused on privacy-preserving technologies. Build tools that champion digital sovereignty. $50,000 in prizes across categories: Privacy, DeFi, DAO Infrastructure.',
+ '72-hour global hackathon focused on Web3 innovation. Build tools that champion digital sovereignty. $50,000 in prizes across categories: Privacy, DeFi, DAO Infrastructure.',
  '2026-07-15', '2026-07-18', 'Berlin, Germany + Online', 500, 312, 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800', TRUE),
 
 ('Web3 Accelerator Program — Cohort 3',
  'accelerator',
- 'A 12-week accelerator for early-stage Web3 startups. Mentorship from industry leaders, $25K seed investment, and introductions to top-tier VCs in the crypto space.',
+ 'A 12-week accelerator for early-stage Web3 startups. Mentorship from industry leaders, seed investment, and introductions to top-tier VCs in the crypto space.',
  '2026-08-10', '2026-11-01', 'Singapore + Dubai', 30, 12, 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800', FALSE),
 
-('Cypherpunk Pop-up Village: Lisbon',
+('CyberPhunk Pop-up Village: Lisbon',
  'village',
  'A week-long co-living and co-working experience for Web3 builders. Workshops, talks, beach hacks, and networking with 100+ builders from around the world.',
  '2026-09-20', '2026-09-27', 'Lisbon, Portugal', 100, 67, 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800', FALSE);
@@ -64,7 +64,7 @@ INSERT INTO events (title, type, description, date, end_date, location, capacity
 INSERT INTO projects (title, description, category, tags, image_url, github_url, live_url, author, is_featured) VALUES
 ('GhostPay — Anonymous Payment Protocol',
  'A zero-knowledge payment protocol built on Ethereum that enables fully anonymous transactions without revealing sender, receiver, or amount. Uses ZK-SNARKs for proof generation.',
- 'privacy', 'privacy,zkproofs,ethereum,solidity', 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800', 'https://github.com', 'https://ghostpay.io', 'CipherDev Team', TRUE),
+ 'privacy', 'privacy,zkproofs,ethereum,solidity', 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800', 'https://github.com', 'https://ghostpay.io', 'CyberPhunk Team', TRUE),
 
 ('ApeVault — NFT-Collateralized Lending',
  'Borrow stablecoins against your NFT collection without selling your assets. Supports BAYC, CryptoPunks, Azuki, and 50+ collections with real-time floor price oracles.',
@@ -82,13 +82,13 @@ INSERT INTO projects (title, description, category, tags, image_url, github_url,
  'Decentralized voting protocol using zero-knowledge proofs to ensure ballot privacy. Voters prove eligibility without revealing their identity. Used in 3 major DAO elections.',
  'privacy', 'voting,zkproofs,dao,governance', 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800', 'https://github.com', 'https://zkvote.org', 'PrivacyFirst', FALSE),
 
-('CypherBadge — Soulbound Achievement NFTs',
+('CyberBadge — Soulbound Achievement NFTs',
  'Non-transferable NFTs that certify Web3 skills and achievements. Issued upon completing bootcamps, hackathons, or passing technical assessments. Your on-chain resume.',
- 'nft', 'nft,soulbound,identity,credentials', 'https://images.unsplash.com/photo-1646753522408-077ef9839300?w=800', 'https://github.com', 'https://cypherbadge.io', 'Cypherpunk Team', TRUE),
+ 'nft', 'nft,soulbound,identity,credentials', 'https://images.unsplash.com/photo-1646753522408-077ef9839300?w=800', 'https://github.com', 'https://cyberbadge.io', 'CyberPhunk Team', TRUE),
 
 ('MeshNet — P2P Encrypted Messaging',
  'Browser-based peer-to-peer encrypted messaging with no central server. Messages are routed through a decentralized mesh network. No accounts, no logs, no trace.',
- 'privacy', 'privacy,p2p,messaging,encryption', 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800', 'https://github.com', 'https://meshnet.dev', 'CipherDev Team', FALSE),
+ 'privacy', 'privacy,p2p,messaging,encryption', 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800', 'https://github.com', 'https://meshnet.dev', 'CyberPhunk Team', FALSE),
 
 ('LiquidGov — Cross-Chain Governance',
  'Vote on protocol proposals across 10+ blockchains using a single interface. Aggregates governance from Ethereum, Solana, Cosmos, and more. Liquid democracy implementation.',
