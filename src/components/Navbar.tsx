@@ -3,11 +3,22 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import dynamic from "next/dynamic";
+
+const WalletMultiButton = dynamic(
+  async () => (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
+  { ssr: false }
+);
+
+import { useAuth } from "@/hooks/useAuth";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { connected, publicKey } = useWallet();
+  const { profile } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -15,13 +26,31 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
+  const baseLinks = [
     { name: "Discovery", href: "/" },
     { name: "Events", href: "/events" },
     { name: "Projects", href: "/projects" },
     { name: "Marketplace", href: "/marketplace" },
     { name: "Resources", href: "/resources" },
   ];
+
+  const getRoleLinks = () => {
+    if (!profile) return [];
+    
+    const links = [];
+    if (profile.role === 'admin') {
+      links.push({ name: "Admin", href: "/admin" });
+    }
+    if (profile.role === 'organizer') {
+      links.push({ name: "Host Event", href: "/events/new" });
+    }
+    if (profile.role === 'builder') {
+      links.push({ name: "Launch", href: "/projects/new" });
+    }
+    return links;
+  };
+
+  const navLinks = [...baseLinks, ...getRoleLinks()];
 
   return (
     <nav
@@ -54,16 +83,37 @@ const Navbar = () => {
 
         {/* CTA & Wallet */}
         <div className="hidden lg:flex items-center gap-4">
+          {connected && publicKey ? (
+            <div className="flex items-center gap-6 mr-4">
+               {!profile && pathname !== '/register' && (
+                 <Link href="/register" className="text-primary font-mono text-[10px] animate-pulse border border-primary/30 px-2 py-1 rounded">
+                   COMPLETE_REGISTRATION
+                 </Link>
+               )}
+               {profile && (
+                 <>
+                   <Link href={`/profile/${publicKey.toBase58()}`} className="text-white/60 hover:text-white transition-colors text-xs font-mono tracking-widest uppercase">Profile</Link>
+                   <Link href="/settings" className="text-white/60 hover:text-white transition-colors text-xs font-mono tracking-widest uppercase">Settings</Link>
+                 </>
+               )}
+            </div>
+          ) : (
+            <Link
+              href="/login"
+              className="text-white/60 hover:text-white transition-colors text-xs font-mono tracking-widest uppercase mr-4"
+            >
+              Login
+            </Link>
+          )}
           <Link
             href="/community"
             className="font-heading text-sm font-bold text-white/80 hover:text-white transition-colors"
           >
             Join Community
           </Link>
-          <button className="btn-primary flex items-center gap-2 text-sm px-5 py-2.5">
-            <span className="w-2 h-2 bg-black rounded-full animate-pulse"></span>
-            CONNECT WALLET
-          </button>
+          <div className="wallet-adapter-custom">
+            <WalletMultiButton className="btn-primary !h-auto !py-2.5 !px-5 !text-sm !font-heading !font-bold !bg-primary !text-black hover:!scale-105 active:!scale-95 transition-all shadow-[0_0_20px_rgba(255,107,0,0.4)]" />
+          </div>
         </div>
 
         {/* Mobile Toggle */}
@@ -103,7 +153,9 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <button className="btn-primary w-64 mt-4">CONNECT WALLET</button>
+          <div className="wallet-adapter-custom">
+            <WalletMultiButton className="btn-primary !h-auto !py-2.5 !px-5 !text-sm !font-heading !font-bold !bg-primary !text-black hover:!scale-105 active:!scale-95 transition-all shadow-[0_0_20px_rgba(255,107,0,0.4)]" />
+          </div>
         </div>
       </div>
     </nav>

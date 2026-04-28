@@ -1,25 +1,28 @@
--- CyberPhunk Database Schema
-CREATE DATABASE IF NOT EXISTS cyberphunk;
-USE cyberphunk;
+-- CyberPhunk Database Schema (PostgreSQL)
+
+-- Create ENUM types
+CREATE TYPE user_role AS ENUM ('member', 'admin');
+CREATE TYPE event_type AS ENUM ('bootcamp', 'hackathon', 'accelerator', 'village', 'seminar');
+CREATE TYPE project_category AS ENUM ('defi', 'nft', 'privacy', 'dao', 'tool', 'other');
 
 -- Users table
 CREATE TABLE IF NOT EXISTS users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   username VARCHAR(100) NOT NULL,
   email VARCHAR(255) UNIQUE NOT NULL,
   wallet_address VARCHAR(255),
   avatar_url VARCHAR(500),
-  role ENUM('member','admin') DEFAULT 'member',
+  role user_role DEFAULT 'member',
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Blog Posts
 CREATE TABLE IF NOT EXISTS posts (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   title VARCHAR(500) NOT NULL,
   slug VARCHAR(500) UNIQUE NOT NULL,
   excerpt TEXT,
-  body LONGTEXT,
+  body TEXT,
   author VARCHAR(200),
   category VARCHAR(100),
   tags VARCHAR(500),
@@ -30,9 +33,9 @@ CREATE TABLE IF NOT EXISTS posts (
 
 -- Events / Programs
 CREATE TABLE IF NOT EXISTS events (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   title VARCHAR(300) NOT NULL,
-  type ENUM('bootcamp','hackathon','accelerator','village','seminar') NOT NULL,
+  type event_type NOT NULL,
   description TEXT,
   date DATE,
   end_date DATE,
@@ -46,10 +49,10 @@ CREATE TABLE IF NOT EXISTS events (
 
 -- Projects / Showcase
 CREATE TABLE IF NOT EXISTS projects (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   title VARCHAR(300) NOT NULL,
   description TEXT,
-  category ENUM('defi','nft','privacy','dao','tool','other') DEFAULT 'other',
+  category project_category DEFAULT 'other',
   tags VARCHAR(500),
   image_url VARCHAR(500),
   github_url VARCHAR(500),
@@ -61,7 +64,7 @@ CREATE TABLE IF NOT EXISTS projects (
 
 -- Contact messages
 CREATE TABLE IF NOT EXISTS contacts (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   name VARCHAR(200) NOT NULL,
   email VARCHAR(255) NOT NULL,
   message TEXT,
@@ -70,7 +73,7 @@ CREATE TABLE IF NOT EXISTS contacts (
 
 -- Event registrations
 CREATE TABLE IF NOT EXISTS registrations (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   event_id INT,
   name VARCHAR(200) NOT NULL,
   email VARCHAR(255) NOT NULL,

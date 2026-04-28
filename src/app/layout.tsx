@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Rajdhani, Inter, Share_Tech_Mono } from "next/font/google";
 import "./globals.css";
+import WalletProvider from "@/components/WalletProvider";
 
 const rajdhani = Rajdhani({
   weight: ["300", "400", "500", "600", "700"],
@@ -34,7 +35,9 @@ export default function RootLayout({
       <body
         className={`${rajdhani.variable} ${inter.variable} ${mono.variable} font-body antialiased bg-background text-foreground min-h-screen`}
       >
-        {children}
+        <WalletProvider>
+          {children}
+        </WalletProvider>
       </body>
     </html>
   );
